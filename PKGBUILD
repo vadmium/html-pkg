@@ -2,14 +2,14 @@
 
 pkgname=html-docs
 pkgver=4.01
-pkgrel=2
+pkgrel=3
 pkgdesc="SGML DTD and documentation for HTML 4.01."
 arch=('i686' 'x86_64')
 url="http://www.w3.org/TR/html401"
 license=('GPL')
 options=('docs')
 source=(http://www.w3.org/TR/1999/REC-html401-19991224/html40.tgz profile.sh)
-md5sums=('1ed76627ba80816079649f67023ec7ab' 'd05370d0e3003ab8052afb6f853d580f')
+md5sums=('1ed76627ba80816079649f67023ec7ab' '254964bb5a508a3af0dc7d01b0e7d370')
 
 build(){
   cd "$srcdir"
