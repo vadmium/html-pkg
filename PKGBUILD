@@ -12,6 +12,10 @@ source=(http://www.w3.org/TR/1999/REC-html401-19991224/html40.tgz profile.sh)
 md5sums=('1ed76627ba80816079649f67023ec7ab'
 	 '254964bb5a508a3af0dc7d01b0e7d370')
 
+# Work around server indicating a "gzip"-encoded "gzip" file
+makedepends+=(curl)
+DLAGENTS=(http::"$(command -v curl) --no-compression %u -o %o")
+
 build(){
   cd "$srcdir"
   rm html40.tgz
